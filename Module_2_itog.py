@@ -9,6 +9,5 @@ def open_the_gate(number):
                 password.append(pass_numbers)
             j += 1
     return password
-input_number = int(input('Input number: '))
-print(open_the_gate(input_number))
-#
+input_digit = int(input('Input number: '))
+print(open_the_gate (input_digit))
