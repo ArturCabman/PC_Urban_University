@@ -31,6 +31,7 @@ def check_winner():
         return '0'
     if area[0][2] == '0' and area[1][1] == '0' and area[1][2] == '0':
         return '0'
+    return '*'
 
 def draw_area():
     for i in area:
@@ -57,3 +58,12 @@ for turn in range(1, 10):
         continue
 
     draw_area()
+    if check_winner() == 'X':
+        print('Победа крестиков')
+        break
+    if check_winner() == '0':
+        print('Победа ноликов')
+        break
+    if check_winner() == '*' and turn == 9:
+        print('Ничья')
+        break
