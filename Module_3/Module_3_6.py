@@ -1,10 +1,11 @@
 def data_structure_sum(data_structure):
     sum = 0
+
     if isinstance(data_structure, dict):
         for key, value in data_structure.items():
             sum += data_structure_sum(key)
             sum += data_structure_sum(value)
-    elif isinstance(data_structure, (list, tuple)):
+    elif isinstance(data_structure, (list, tuple, set)):
         for item in data_structure:
             sum += data_structure_sum(item)
     elif isinstance(data_structure, (int, float)):
