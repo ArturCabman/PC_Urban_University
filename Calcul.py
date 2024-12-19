@@ -1,11 +1,11 @@
 import tkinter as tk
 
-def get_values()
+def get_values():
     num1 = int(number1_entry.get())
     num2 = int(number2_entry.get())
     return num1, num2
 
-def insert_values(value)
+def insert_values(value):
     answer_entry.delete(0, 'end')
     answer_entry.insert(0, value)
 
